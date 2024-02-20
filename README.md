@@ -1,10 +1,11 @@
 # Wilmer 
 
-pagina wilmer hecho con JS
+mi página :D
 
-<img src="https://github.com/Wilsmac.png" alt="cesar" width="400"/>
+<img src="https://github.com/Wilsmac.png" alt="wilmer" width="400"/>
 
-Tecnologías:
+lo q se usó:
 - HTML
 - Css
 - JavaScript
+- no se :v
