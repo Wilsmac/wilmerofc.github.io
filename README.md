@@ -11,6 +11,8 @@ lo q se usó:
 - no se :v
 
 ```ts
+// index.js
+
 // Función para sumar dos números
 function sumar() {
     var num1 = parseFloat(document.getElementById('num1').value);
