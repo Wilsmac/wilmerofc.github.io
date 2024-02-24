@@ -44,5 +44,42 @@ function multiplicar() {
     <script src="index.js"></script>
 </body>
 </html>
+//index.css
 
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    margin: 0;
+    padding: 20px;
+}
+
+label {
+    font-weight: bold;
+}
+
+input[type="text"] {
+    padding: 8px;
+    margin-bottom: 10px;
+    width: 200px;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    cursor: pointer;
+    margin-right: 10px;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+p {
+    margin-top: 20px;
+    font-size: 18px;
+}
+
+index.
 ```
