@@ -123,5 +123,8 @@
       <input type="text" id="commandInput" placeholder="Type your command..." />
     </div>
     <script>
-      
+     if (event.key === "Enter") {
+          const command = commandInput.value;
+          socket.send(command);
+          commandInput.value = ""; 
 </html>
