@@ -43,49 +43,14 @@
 </head>
 <body>
 
-<?php
-// Configura los datos de tu cuenta
-$dbhost='localhost';
-$dbusername='username';
-$dbuserpass='password';
-$dbname='database';
-//Conexi&oacute;n a la base de datos
-mysql_connect("localhost", "root" ) or die(mysql_error());
-mysql_select_db("database" ) or die(mysql_error());
+<form action="entrar.php" method="post">
+Usuario:<input type="text" name="username" />
+<br />  
+Password:<input type="password" name="password" />
+<br />
+<input type="submit" value="Entrar" />
+</form>
 
-//Preguntaremos si se han enviado ya las variables  necesarias
-if (isset($_POST["username"] ) ) {
-$username = $_POST["username"];
-$password = $_POST["password"];
-$cpassword = $_POST["cpassword"];
-$email = $_POST["email"];
-// Hay campos en blanco 
-if($username==NULL|$password==NULL|$cpassword==NULL|$email==NULL) {
-echo "Hay Campos Vacios";
-}else{
-// &iquest;Coinciden las contrase&ntilde;as?
-if($password!=$cpassword) {
-echo "Las Contrase&ntilde;as No Coinciden";
-}else{
- Comprobamos si el nombre de usuario o la cuenta de correo ya exist&iacute;an
-$checkuser = mysql_query("SELECT username FROM users WHERE username='$username'" ) ;
-$username_exist = mysql_num_rows($checkuser);
-
-$checkemail = mysql_query("SELECT email FROM users WHERE email='$email'" ) ;
-$email_exist = mysql_num_rows($checkemail);
-
-if ($email_exist>0|$username_exist>0) {
-echo "EL Nombre de Usuario o la Cuenta de Correo Estan ya en Uso";
-}else{
-//Todo parece correcto procedemos con la inserccion
-$query = "INSERT INTO users (username, password, email) VALUES('$username','$password','$email')";
-mysql_query($query) or die(mysql_error());
-echo "El Usuario $username ha Sido Registrado de Manera Satisfactoria. Ahora Puedes Iniciar Session";
-}
-}
-}
-}
-?>
 <script id="Cookiebot" src="https://consent.cookiebot.com/uc.js" data-cbid="1c76d6d2-b06a-44ae-8ff2-dd50a783fcdb" data-blockingmode="auto" type="text/javascript"></script>
 
 
