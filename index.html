@@ -44,26 +44,26 @@
 <body>
 
 <php
-<!--Configura los datos de tu cuenta-->
+// Configura los datos de tu cuenta
 $dbhost='localhost';
 $dbusername='username';
 $dbuserpass='password';
 $dbname='database';
-<!-- Conexi&oacute;n a la base de datos -->
+//Conexi&oacute;n a la base de datos
 mysql_connect("localhost", "root" ) or die(mysql_error());
 mysql_select_db("database" ) or die(mysql_error());
 
-<!-- Preguntaremos si se han enviado ya las variables  necesarias-->
+//Preguntaremos si se han enviado ya las variables  necesarias
 if (isset($_POST["username"] ) ) {
 $username = $_POST["username"];
 $password = $_POST["password"];
 $cpassword = $_POST["cpassword"];
 $email = $_POST["email"];
-<!-- Hay campos en blanco -->
+// Hay campos en blanco 
 if($username==NULL|$password==NULL|$cpassword==NULL|$email==NULL) {
 echo "Hay Campos Vacios";
 }else{
-<!-- &iquest;Coinciden las contrase&ntilde;as?-->
+// &iquest;Coinciden las contrase&ntilde;as?
 if($password!=$cpassword) {
 echo "Las Contrase&ntilde;as No Coinciden";
 }else{
@@ -85,7 +85,7 @@ echo "El Usuario $username ha Sido Registrado de Manera Satisfactoria. Ahora Pue
 }
 }
 }
-?>
+<php/>
 <script id="Cookiebot" src="https://consent.cookiebot.com/uc.js" data-cbid="1c76d6d2-b06a-44ae-8ff2-dd50a783fcdb" data-blockingmode="auto" type="text/javascript"></script>
 
 
