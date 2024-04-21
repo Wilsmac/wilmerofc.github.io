@@ -43,12 +43,16 @@
 </head>
 <body>
 
-<form action="entrar.php" method="post">
-Usuario:<input type="text" name="username" />
-<br />  
-Password:<input type="password" name="password" />
+<form action="registro.php" method="post">
+Nombre de Usuario:<input maxlength="25" size="25" name="username" />
 <br />
-<input type="submit" value="Entrar" />
+Password:<input type="password" maxlength="25" size="25" name="password" />
+<br />
+Repite Password:<input type="password" maxlength="25" size="25" name="cpassword" />
+<br />
+Email:<input maxlength="35" size="25" name="email" />
+<br />
+<input type="submit" value="Registrar" />
 </form>
 
 <script id="Cookiebot" src="https://consent.cookiebot.com/uc.js" data-cbid="1c76d6d2-b06a-44ae-8ff2-dd50a783fcdb" data-blockingmode="auto" type="text/javascript"></script>
