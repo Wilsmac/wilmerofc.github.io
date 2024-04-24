@@ -1,36 +1,32 @@
-const colorSwitch = document.querySelector('#switch input[type="checkbox"]');
-            function cambiaTema(ev){
-                if(ev.target.checked){
-                    document.documentElement.setAttribute('tema', 'light');
-                } else {
-                    document.documentElement.setAttribute('tema', 'dark');
-                }
-            }
-            colorSwitch.addEventListener('change', cambiaTema);
 
-const tipButtons = document.querySelectorAll('.tip-button')
+function sumar() {
+  var num1 = parseInt(document.getElementById("num1").value);
+  var num2 = parseInt(document.getElementById("num2").value);
+  document.getElementById("resultado").innerText = "El resultado es: " + (num1 + num2);
+}
 
-// Loop through all buttons (allows for multiple buttons on page)
-tipButtons.forEach((button) => {
-  let coin = button.querySelector('.coin')
+function restar() {
+  var num1 = parseInt(document.getElementById("num1").value);
+  var num2 = parseInt(document.getElementById("num2").value);
+  document.getElementById("resultado").innerText = "El resultado es: " + (num1 - num2);
+}
 
-  // The larger the number, the slower the animation
-  coin.maxMoveLoopCount = 90
+function multiplicar() {
+  var num1 = parseInt(document.getElementById("num1").value);
+  var num2 = parseInt(document.getElementById("num2").value);
+  document.getElementById("resultado").innerText = "El resultado es: " + (num1 * num2);
+}
 
-  button.addEventListener('click', () => {
-    if (button.clicked) return
+function dividir() {
+  var num1 = parseInt(document.getElementById("num1").value);
+  var num2 = parseInt(document.getElementById("num2").value);
+  if (num2 === 0) {
+    document.getElementById("resultado").innerText = "No se puede dividir por cero";
+  } else {
+    document.getElementById("resultado").innerText = "El resultado es: " + (num1 / num2);
+  }
+}
 
-    button.classList.add('clicked')
-
-    // Wait to start flipping the coin because of the button tilt animation
-    setTimeout(() => {
-      // Randomize the flipping speeds just for fun
-      coin.sideRotationCount = Math.floor(Math.random() * 5) * 90
-      coin.maxFlipAngle = (Math.floor(Math.random() * 4) + 3) * Math.PI
-      button.clicked = true
-      flipCoin()
-    }, 50)
-  })
 
   const flipCoin = () => {
     coin.moveLoopCount = 0
