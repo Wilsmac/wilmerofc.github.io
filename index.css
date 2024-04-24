@@ -31,7 +31,7 @@ $shine: #e9f4ff;
   &:active {
     transform: rotate(4deg);
   }
-  // Button was clicked
+ 
   &.clicked {
     animation: 150ms ease-in-out 1 shake;
     pointer-events: none;
@@ -39,7 +39,7 @@ $shine: #e9f4ff;
       opacity: 0;
       transition: opacity 100ms linear 200ms;
     }
-    &::before { // background/bar
+    &::before {
       height: 0.5rem;
       width: 60%;
     }
@@ -48,14 +48,14 @@ $shine: #e9f4ff;
       margin-bottom: 0;
     }
   }
-  // Coin almost finished falling
+  
   &.shrink-landing {
-    &::before { // background/bar
+    &::before { 
       transition: width 200ms ease-in;
       width: 0;
     }
   }
-  // Coin finished falling
+  
   &.coin-landed {
     &::after { // Thank you message
       opacity: 1;
@@ -63,7 +63,7 @@ $shine: #e9f4ff;
       transform-origin: 50% 100%;
     }
 
-    // Make the little confetti looking dots on this wrapper
+    
     .coin-wrapper {
       background:
         radial-gradient(circle at 35% 97%, rgba($bg-button, 0.4) 0.04rem, transparent 0.04rem),
@@ -87,7 +87,7 @@ $shine: #e9f4ff;
     z-index: 3;
   }
 
-  // Background of button
+  
   &::before {
     background: $bg-button;
     border-radius: 0.25rem;
@@ -103,7 +103,7 @@ $shine: #e9f4ff;
     z-index: 2;
   }
 
-  // Thank you message
+  
   &::after {
     bottom: -1rem;
     color: $bg-button;
@@ -174,7 +174,7 @@ $shine: #e9f4ff;
     z-index: 3;
   }
 
-  // Tails
+ 
   &__front {
     background:
       radial-gradient(circle at 50% 50%, transparent 50%, rgba($c-side, 0.4) 54%, $c-m 54%),
@@ -187,7 +187,7 @@ $shine: #e9f4ff;
     background-size: 100% 100%;
     transform: translateY(calc(var(--front-y-multiplier) * #{$coin-thickness} / 2)) scaleY(var(--front-scale-multiplier));
   
-    // Shadow on coin face
+    
     &::after {
       background: rgba(#000, 0.2);
       content: '';
@@ -200,7 +200,7 @@ $shine: #e9f4ff;
     transform: translateY(calc(var(--middle-y-multiplier) * #{$coin-thickness} / 2)) scaleY(var(--middle-scale-multiplier));
   }
 
-  // Heads
+ 
   &__back {
     background:
       radial-gradient(circle at 50% 50%, transparent 50%, rgba($c-side, 0.4) 54%, $c-m 54%),
@@ -210,7 +210,7 @@ $shine: #e9f4ff;
     background-size: 100% 100%;
     transform: translateY(calc(var(--back-y-multiplier) * #{$coin-thickness} / 2)) scaleY(var(--back-scale-multiplier));
   
-    // Shadow on coin face
+    
     &::after {
       background: rgba(#000, 0.2);
       content: '';
@@ -218,7 +218,7 @@ $shine: #e9f4ff;
     }
   }
 
-  // Light glare on the coin
+ 
   &::before {
     background:
       radial-gradient(circle at 25% 65%, transparent 50%, rgba(white, 0.9) 90%),
@@ -232,7 +232,7 @@ $shine: #e9f4ff;
     z-index: 10;
   }
 
-  // Sqaure for the 'side' of the coin
+ 
   &::after {
     background: $c-side;
     content: '';
@@ -252,7 +252,7 @@ $shine: #e9f4ff;
   100% { transform: rotate() }
 }
 
-/********* BODY STYLES *********/
+
 html,
 body {
   height: 100%;
