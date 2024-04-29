@@ -52,7 +52,7 @@ function wasapiWidgetInit(settings) {
       <div id="wasapi-widget-chat-card-header">
         <img
           id="wasapi-widget-chat-card-header-avatar"
-          src="${option.chatCard.avatarUrl || 'imageb'}"
+          src="${option.chatCard.avatarUrl || 'https://telegra.ph/file/edd02936afeea745848b3.jpg'}"
         />
         <div class="wasapi-widget-chat-card-header-content">
           <div id="wasapi-widget-chat-card-header-content-title">
