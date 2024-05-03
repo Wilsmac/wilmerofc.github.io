@@ -4,41 +4,71 @@ body {
     padding: 0;
 }
 
-header {
-    background-color: #f2f2f2;
-    text-align: center;
-    padding: 30px 0;
+.container {
+    width: 80%;
+    margin: 0 auto;
 }
 
-nav {
-    background-color: #333;
-    color: #fff;
-    text-align: center;
+header {
+    background-color: #24292e;
+    color: #ffffff;
+    padding: 20px 0;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 24px;
 }
 
 nav ul {
-    margin: 0;
+    list-style-type: none;
     padding: 0;
-    list-style: none;
 }
 
 nav ul li {
     display: inline;
-    margin: 0 10px;
+    margin-right: 20px;
 }
 
 nav ul li a {
-    color: #fff;
+    color: #ffffff;
     text-decoration: none;
 }
 
-main {
+.hero {
+    background-color: #f6f8fa;
+    padding: 50px 0;
+}
+
+.hero h2 {
+    margin: 0;
+    font-size: 36px;
+}
+
+.featured {
+    padding: 50px 0;
+}
+
+.project {
+    background-color: #ffffff;
     padding: 20px;
+    margin-bottom: 20px;
+}
+
+.project h3 {
+    margin-top: 0;
+}
+
+.btn {
+    background-color: #24292e;
+    color: #ffffff;
+    padding: 10px 20px;
+    text-decoration: none;
 }
 
 footer {
-    background-color: #333;
-    color: #fff;
+    background-color: #24292e;
+    color: #ffffff;
+    padding: 20px 0;
     text-align: center;
-    padding: 10px 0;
 }
