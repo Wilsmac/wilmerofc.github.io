@@ -3,51 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mi Página</title>
+    <title>Iniciar Sesión - GitHub</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <header>
-        <div class="container">
-            <h1>Mi Repositorio</h1>
-            <nav>
-                <ul>
-                    <li><a href="#">Inicio</a></li>
-                    <li><a href="#">Sobre mí</a></li>
-                    <li><a href="#">Proyectos</a></li>
-                    <li><a href="#">Contacto</a></li>
-                </ul>
-            </nav>
+    <div class="login-container">
+        <div class="login-box">
+            <img src="github-logo.png" alt="GitHub Logo">
+            <h2>Iniciar Sesión</h2>
+            <form action="#" method="POST">
+                <div class="input-group">
+                    <label for="username">Nombre de usuario</label>
+                    <input type="text" id="username" name="username" required>
+                </div>
+                <div class="input-group">
+                    <label for="password">Contraseña</label>
+                    <input type="password" id="password" name="password" required>
+                </div>
+                <button type="submit" class="btn">Iniciar Sesión</button>
+            </form>
+            <p class="signup-link">¿No tienes una cuenta? <a href="#">Regístrate</a></p>
         </div>
-    </header>
-
-    <section class="hero">
-        <div class="container">
-            <h2>Bienvenido a mi Repositorio</h2>
-            <p>Explora mis proyectos y contribuciones.</p>
-        </div>
-    </section>
-
-    <section class="featured">
-        <div class="container">
-            <h2>Proyectos Destacados</h2>
-            <div class="project">
-                <h3>Proyecto 1</h3>
-                <p>Descripción breve del proyecto 1.</p>
-                <a href="#" class="btn">Ver más</a>
-            </div>
-            <div class="project">
-                <h3>Proyecto 2</h3>
-                <p>Descripción breve del proyecto 2.</p>
-                <a href="#" class="btn">Ver más</a>
-            </div>
-        </div>
-    </section>
-
-    <footer>
-        <div class="container">
-            <p>&copy; 2024 Mi Repositorio</p>
-        </div>
-    </footer>
+    </div>
 </body>
 </html>
