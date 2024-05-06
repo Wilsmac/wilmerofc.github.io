@@ -27,7 +27,7 @@ body {
 .input-field {
     position: relative;
 }
-input-field input[type="email"],
+.input-field input[type="email"],
 .input-field input[type="password"] {
     border-radius: 10px;
     background: transparent;
