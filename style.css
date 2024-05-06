@@ -1,11 +1,11 @@
-body{
+body {
     background: url(https://telegra.ph/file/fe1653091c3f9ec7f755c.png) no-repeat;
     background-position: center;
     background-size: cover;
     width: 400px;
     height: 600px;
 }
-.wrapper{
+.wrapper {
     position: absolute;
     top: 50%;
     left: 50%;
@@ -20,11 +20,11 @@ body{
     background-filter: blur(6px);
     box-shadow: 5px 5px 10px 0 rgba(0,0,0, 0.5);
 }    
-.wrapper h2{
+.wrapper h2 {
     font-size: 30px;
     color: #fffefe;
 }
-.input-field{
+.input-field {
     position: relative;
 }
 input-field input[type="email"],
@@ -38,14 +38,14 @@ input-field input[type="email"],
     padding: 20px 40px 20px 20px;
     blackdrop-filter: blur(15px);   
 }
-.input-field i{
+.input-field i {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
     right: 10px;
     color: rgb(252, 252, 252);
 }
-input::placeholder{
+input::placeholder {
     color: rgb(255, 255, 255);
 }
 .input-field input[type="email"]:focus::placeholder,
@@ -78,7 +78,7 @@ a.sign-up:hover {
     color: #fffffffd;
 }
 
-.wrapper .Login{
+.wrapper .Login {
     background: #fff;
     border: none;
     outline: none;
