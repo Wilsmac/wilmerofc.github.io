@@ -5,35 +5,7 @@
 <meta charset="UTF-8">
     <meta name="viewport" content="width-divice-width, initial-scale=1.0">
     <title>Wilmer :3</title>
-    
-  </head>
-
-  <body>
-<script>
-$('#login-button').click(function(){
-  $('#login-button').fadeOut("slow",function(){
-    $("#container").fadeIn();
-    TweenMax.from("#container", .4, { scale: 0, ease:Sine.easeInOut});
-    TweenMax.to("#container", .4, { scale: 1, ease:Sine.easeInOut});
-  });
-});
-
-$(".close-btn").click(function(){
-  TweenMax.from("#container", .4, { scale: 1, ease:Sine.easeInOut});
-  TweenMax.to("#container", .4, { left:"0px", scale: 0, ease:Sine.easeInOut});
-  $("#container, #forgotten-container").fadeOut(800, function(){
-    $("#login-button").fadeIn(800);
-  });
-});
-
-/* Forgotten Password */
-$('#forgotten').click(function(){
-  $("#container").fadeOut(function(){
-    $("#forgotten-container").fadeIn();
-  });
-});
-</script>
-<style>
+    <style>
 html { 
   background: url(http://cdn.magdeleine.co/wp-content/uploads/2014/05/3jPYgeVCTWCMqjtb7Dqi_IMG_8251-1400x933.jpg) no-repeat center center fixed; 
   -webkit-background-size: cover;
@@ -247,6 +219,33 @@ a:hover{
   background: rgba(87,198,255,.5);
 }
 </style>
+  </head>
+
+  <body>
+<script>
+$('#login-button').click(function(){
+  $('#login-button').fadeOut("slow",function(){
+    $("#container").fadeIn();
+    TweenMax.from("#container", .4, { scale: 0, ease:Sine.easeInOut});
+    TweenMax.to("#container", .4, { scale: 1, ease:Sine.easeInOut});
+  });
+});
+
+$(".close-btn").click(function(){
+  TweenMax.from("#container", .4, { scale: 1, ease:Sine.easeInOut});
+  TweenMax.to("#container", .4, { left:"0px", scale: 0, ease:Sine.easeInOut});
+  $("#container, #forgotten-container").fadeOut(800, function(){
+    $("#login-button").fadeIn(800);
+  });
+});
+
+/* Forgotten Password */
+$('#forgotten').click(function(){
+  $("#container").fadeOut(function(){
+    $("#forgotten-container").fadeIn();
+  });
+});
+</script>
 <div id="login-button">
   <img src="https://dqcgrsy5v35b9.cloudfront.net/cruiseplanner/assets/img/icons/login-w-icon.png">
   </img>
