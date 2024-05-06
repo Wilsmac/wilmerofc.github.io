@@ -27,7 +27,7 @@ body {
 .input-field {
     position: relative;
 }
-.input-field input[type="email"],
+input-field input[type="email"],
 .input-field input[type="password"] {
     border-radius: 10px;
     background: transparent;
@@ -48,7 +48,7 @@ body {
 input::placeholder {
     color: rgb(255, 255, 255);
 }
-input-field input[type="email"]:focus::placeholder,
+.input-field input[type="email"]:focus::placeholder,
 .input-field input[type="password"]:focus::placeholder {
     transform: translateY(-100%);
     transition: transform 0.2s ease-in-out;
