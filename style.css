@@ -60,20 +60,20 @@ input::placeholder {
     transition: transform 0.2s ease-in-out;
     font-size: 16px;
 }
-a.forgot {
+.forgot {
     text-decoration: none;
     position: relative;
     color: rgb(255, 255, 255, 0.712);
 }
-a.forgot:hover {
+.forgot:hover {
   text-decoration: underline;
   color: #fffffffd;
 }
-a.sign-up {
+.sign-up {
     text-decoration: none;
     color: rgba(255, 255, 255, 0.712);
 }
-a.sign-up:hover {
+.sign-up:hover {
     text-decoration: underline;
     color: #fffffffd;
 }
