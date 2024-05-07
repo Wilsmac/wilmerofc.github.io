@@ -17,6 +17,7 @@ body{
     height: 650px;
     width: 410px;
     background: #eee;
+    background: transparent;
     border-radius: 15px;
     display: flex;
     justify-content: center;
