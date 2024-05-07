@@ -15,7 +15,7 @@ body{
 .container{
     height: 650px;
     width: 410px;
-    background: transparent;
+    background: #eee;
     border-radius: 15px;
     display: flex;
     justify-content: center;
