@@ -9,8 +9,7 @@ body{
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    background: linear-gradient(45deg ,#098dc1,60% ,#f417de);
-    
+    background: url('https://telegra.ph/file/fe1653091c3f9ec7f755c.png')no-repeat;
     
 }
 .container{
