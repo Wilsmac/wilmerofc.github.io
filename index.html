@@ -1,4 +1,393 @@
-<!DOCTYPE html>
+
+<!doctype html>
+<html lang="es">
+<head>
+<title>Sitio web oficial de GOC</title>
+<meta name='keywords' content='Guardians of Cloudia, GOC, 9 monstruos, NEOCRAFT, RPG, MMO, Tales of Wind' />
+<meta name='description' content='¡La combinación perfecta entre un juego de cartas y un RPG! ¡Libera tu legión de 9 monstruos y prevalece en el mundo de Cloudia!'>
+<meta charset="UTF-8" />
+<meta name="viewport"
+      content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!--  强制双核浏览器使用 Chromium 内核-->
+<meta name="renderer" content="webkit" />
+<meta name="csrf-token" content="Q6RukRcXo37x8mAMGO5syNrkZWo4KTX0EeCxgThA">
+<link rel='canonical' href='https://goc.neocraftstudio.com/es'>
+
+    <!-- Open graph -->
+<meta property='fb:app_id' content='250438506440272' />
+
+<meta property='og:site_name' content='Sitio web oficial de GOC' />
+<meta property='og:type' content='website' />
+<meta property='og:title' content='Guardians of Cloudia Official Site' />
+<meta property='og:url' content='https://goc.neocraftstudio.com/es' />
+<meta property='og:description' content='The perfect combination of RPG and Card game!' />
+<meta property='og:image' content='https://marketing-static-aws.neocraftstudio.com/goc/assets/img/common/share.jpg' />
+
+    <!-- Twitter card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@Guardians  of Cloudia">
+<meta name="twitter:creator" content="@NEO_GOC">
+<meta name="twitter:title" content="Guardians of Cloudia Official Site">
+<meta name="twitter:description" content="The perfect combination of RPG and Card game!">
+<meta name='twitter:image' content='https://marketing-static-aws.neocraftstudio.com/goc/assets/img/common/share.jpg' />
+    <!-- WeChat sharing -->
+<script>
+  let WECHAT_TITLE = 'Guardians of Cloudia Official Site';
+  let WECHAT_DESC = 'The perfect combination of RPG and Card game!';
+  let WECHAT_IMAGE = 'http://marketing-static-aws.neocraftstudio.com/goc/assets/img/common/share.jpg';
+  let WECHAT_NO_GA = '';
+</script>
+
+            <link rel="alternate" hreflang="en"
+              href="https://goc.neocraftstudio.com/en" />
+            <link rel="alternate" hreflang="de"
+              href="https://goc.neocraftstudio.com/de" />
+            <link rel="alternate" hreflang="fr"
+              href="https://goc.neocraftstudio.com/fr" />
+            <link rel="alternate" hreflang="es"
+              href="https://goc.neocraftstudio.com/es" />
+            <link rel="alternate" hreflang="pt"
+              href="https://goc.neocraftstudio.com/pt" />
+            <link rel="alternate" hreflang="ru"
+              href="https://goc.neocraftstudio.com/ru" />
+        <link rel="alternate" hreflang="x-default"
+          href="https://goc.neocraftstudio.com" />
+
+
+<link rel="stylesheet" href="//marketing-static-aws.neocraftstudio.com/goc/assets/css/mhome.css?version=450c13c02809698727c8f64d36863ded">
+      <script>
+      // PC端和Mobile端共用home.js, 这里给个标志判断特殊情况
+      window.isMobileDevice = true;
+
+      // 载入CSS之前先处理一下页面宽度自适应的问题
+      // 用rem实现宽度自适应, 1rem = 100设计图像素
+      (function (doc) {
+          function setRem() {
+              let docEl = doc.documentElement;
+              // 设计图长宽比, 设计图是750px * 1330px, 跟大多数手机都不匹配, 这里做自适应, 保证所有内容能显示出来
+              // let ratio = 1330 / 750;
+              let ratio = 1200 / 750;
+              if (docEl.clientHeight / docEl.clientWidth >= ratio) {
+                  // 当手机长宽比大于设计图时, 以宽度为准, 1rem = 7.5分之一页面宽度
+                  docEl.style.fontSize = (docEl.clientWidth / 7.5) + 'px';
+              } else {
+                  // 当手机长宽比小于设计图时, 以高度为准, 1rem = 13.3分之一页面高度,
+                  // docEl.style.fontSize = (docEl.clientHeight / 13.3) + 'px';
+                  docEl.style.fontSize = (docEl.clientHeight / 13.3) + 'px';
+              }
+          }
+
+          // window.onresize = setRem;
+          setRem();
+      })(document);
+
+    </script>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-HV6NCHPGE3"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-HV6NCHPGE3');
+
+
+  function gtag_report_conversion(url) {
+      var callback = function () {
+          if (typeof (url) != 'undefined') {
+              window.location = url;
+          }
+      };
+      gtag('event', 'conversion', {
+          'send_to': 'AW-679477078/1xGvCKSf8IkCENb-_8MC',
+          'event_callback': callback,
+      });
+      return false;
+  }
+
+</script>
+<script>
+// APP运行环境
+window.env = "production";
+// 服务端当前时间戳
+window.serverCurrentTimestamp = 1715984727;
+// 服务器倒计时结束时间戳
+window.serverEndTimestamp = 1622023200;
+// 当前预注册人数
+window.currentPreRegisterNum = 100172558.49920157;//50000000;
+// JS里面用到的字符串,如果要本地化就在这里替换掉
+window.stringMap = {"preregister":"Preinscripci\u00f3n","well_done":"\u00a1Bien hecho!","send_email_success":"An email with an activation link has been sent to your mailbox. Please double check the Spam if you don\u0027t receive it.","preregister_success":"\u00a1Te preinscribiste con \u00e9xito! \u00a1Recuerda revisar el aviso de confirmaci\u00f3n y el c\u00f3digo de regalo en tu correo!"};
+
+window.assetsUrl = "//marketing-static-aws.neocraftstudio.com/goc/assets";
+window.sendVerifyEmailApi = "https://goc.neocraftstudio.com/api/send_verify_email";
+window.source = "";
+
+</script>
+</head>
+<body class="es">
+<!--头部-->
+<header class="global-header hide">
+    <h1 class="logo"></h1>
+    <a href="javascript:void(0);" class="language">es</a>
+    <ul class="languages hide">
+                    <li><a href="/en" data-lang="en">EN</a></li>
+                    <li><a href="/de" data-lang="de">DE</a></li>
+                    <li><a href="/fr" data-lang="fr">FR</a></li>
+                    <li><a href="/es" data-lang="es">ES</a></li>
+                    <li><a href="/pt" data-lang="pt">PT</a></li>
+                    <li><a href="/ru" data-lang="ru">RU</a></li>
+            </ul>`
+    <a href="javascript:void(0);" class="menu"></a>
+    <ul class="menus hide">
+        <ul>
+            <li>
+                <a target="_blank" href="https://www.neocraftstudio.com/games">Game</a>
+            </li>
+            <li>
+                <a target="_blank" href="https://www.facebook.com/NEOCRAFTGAMING/">Soporte</a>
+            </li>
+            <li>
+                <a target="_blank"
+                   href="https://accounts.neocraftstudio.com/payment/default?game_id=181">Recargar</a>
+            </li>
+        </ul>
+    </ul>
+</header>
+<!--头部-->
+
+<!-- Slider main container -->
+<div id="global-swiper-container" class="swiper-container">
+    <!-- Additional required wrapper -->
+    <div class="swiper-wrapper">
+        <!-- Slides -->
+        
+        <div class="swiper-slide page-slide">
+            <section class="page active" id="index-page">
+        <div class="logo-wrapper loading">
+        <img src=" //marketing-static-aws.neocraftstudio.com/goc/assets/img/index/logo.png?version=ff19eda6e82dadde861af9707731780e" alt="LOGO" class="logo">
+        <img src=" //marketing-static-aws.neocraftstudio.com/goc/assets/img/index/logo.png?version=ff19eda6e82dadde861af9707731780e" alt="LOGO" class="logo">
+        <h2 class="slogan">¡Libera tu legión de 9 monstruos!</h2>
+        <div class="buttons">
+                         
+            <div class="stories download-btns">
+                
+                    <a
+                        target="_blank"
+                        onclick="return gtag_report_conversion('https://app.adjust.com/zz39ss?campaign=GOC_official_site&adgroup=GOC_official_site&creative=GOC_official_site')"
+                        href="https://app.adjust.com/zz39ss?campaign=GOC_official_site&adgroup=GOC_official_site&creative=GOC_official_site">
+                   <img src="//marketing-static-aws.neocraftstudio.com/goc/assets/img/index/download_btns/app_store_btn.png?version=842239536e00e2b7429bf4690e079a86" alt="app store button">
+                </a>
+                    <a
+                        target="_blank"
+                        onclick="return gtag_report_conversion('https://app.adjust.com/mjqrad2?campaign=GOC_official_site&adgroup=GOC_official_site&creative=GOC_official_site')"
+                        href="https://app.adjust.com/mjqrad2?campaign=GOC_official_site&adgroup=GOC_official_site&creative=GOC_official_site">
+                    <img src="//marketing-static-aws.neocraftstudio.com/goc/assets/img/index/download_btns/google_play_btn.png?version=4e7a796c04fc8bde48c8943df9a5cf80" alt="google play button">
+                </a>
+
+                    <a
+                        target="_blank"
+                        onclick="return gtag_report_conversion('https://static.emagames.cn/static/goc/download/GoC-2021052409501.apk')"
+                        href="https://static.emagames.cn/static/goc/download/GoC-2021052409501.apk">
+                   <img src="//marketing-static-aws.neocraftstudio.com/goc/assets/img/index/download_btns/neo_download_btn.png?version=6588d1f81ef8d189a974e1eb812a3b30" alt="neo download button">
+                </a>
+
+                    <a
+                        target="_blank"
+                        onclick="return gtag_report_conversion('https://appgallery.cloud.huawei.com/ag/n/app/C104192491?channelId=officoal+website&id=4ae30ea9175640bca38426ac42101460&s=D7DFD8245A5498E1CFBD0EA5430C3EE287B2108BF0D118D49F3737F30339BB94&detailType=0&v=')"
+                        href="https://appgallery.cloud.huawei.com/ag/n/app/C104192491?channelId=officoal+website&id=4ae30ea9175640bca38426ac42101460&s=D7DFD8245A5498E1CFBD0EA5430C3EE287B2108BF0D118D49F3737F30339BB94&detailType=0&v=">
+                   <img src="//marketing-static-aws.neocraftstudio.com/goc/assets/img/index/download_btns/huawei_btn.png?version=2b297d28af30480624194db6a5a3074a" alt="huawei download button">
+                </a>
+
+                                                </div>
+        </div>
+    </div>
+    <div class="loading-mask"></div>
+    <!--[if IE]>
+    <p class="browsehappy"
+       style="position: absolute; width: 100%; height: 100px; top: 0; left:0; z-index: 999999; background-color: #d9aa7a; text-align: center; line-height: 100px;">You are using an <strong>outdated</strong> browser. Please <a
+        href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+
+    <aside class="sidebar">
+        <ul class="social-links">
+
+            
+            <li class="facebook">
+                <a target="_blank" rel="nofollow" href="https://www.facebook.com/GuardiansofCloudiaOfficial"></a></li>
+            <li class="twitter">
+                <a target="_blank" rel="nofollow" href="https://twitter.com/NEO_GOC"></a></li>
+            <li class="youtube">
+                <a target="_blank" rel="nofollow"
+                   href="https://www.youtube.com/channel/UCKRQkWYBArQbHeCKGATzq7w"></a></li>
+            <li class="reddit">
+                <a target="_blank" rel="nofollow" href="https://www.reddit.com/r/Guardians_of_Cloudia/new/
+"></a></li>
+            <li class="instagram">
+                <a target="_blank" rel="nofollow" href="https://www.instagram.com/guardians_of_cloudia_official/
+"></a></li>
+        </ul>
+    </aside>
+</section>
+        </div>
+        
+
+        
+        <div class="swiper-slide page-slide">
+           <section class="page" id="character-page">
+    <div class="page-content">
+        <h3 class="page-title">INTRODUCCIÓN A CLASES</h3>
+        <div class="ui-box">
+            <!-- Slider main container -->
+            <div class="swiper-container character-swiper-container">
+                <!-- Additional required wrapper -->
+                <div class="swiper-wrapper">
+                    <!-- Slides -->
+                    <div class="swiper-slide">
+                        <div class="character-info" data-role="archer">
+    <!-- 角色信息 -->
+    <div class="character-details">
+        <div class="header">
+            <h3 class="name">Arquero</h3>
+                        <form class="gender-switch">
+                <label class="male" data-src="//marketing-static-aws.neocraftstudio.com/goc/assets/img/character/archer/male_static.png?version=394eb730a5e323505359265836a0fadd">
+                    <input type="radio" name="archer-gender-switch" value="male"
+                           class="checked">
+                    <i> </i>
+                </label>
+                <label class="female" data-src="//marketing-static-aws.neocraftstudio.com/goc/assets/img/character/archer/female_static.png?version=ad9224fb4f71ad0e953e91b70f801743">
+                    <input type="radio" name="archer-gender-switch" value="female"
+                           class="">
+                    <i> </i>
+                </label>
+            </form>
+        </div>
+        <div class="description">Gracias a su excelente visión, una voluntad de hierro y flechas poderosas, el arquero se puede mover con libertad en cualquier entorno y apuntar al objetivo desde cualquier distancia.</div>
+        <div class="characteristics">
+            <p class="title">CARACTERÍSTICAS:</p>
+            <div class="value">Vector de viento
+                <div class="info-popup">
+                    <i class="icon info"></i>
+                    <div class="content">
+                        <p class="scroll-wrapper">
+                            Conjura Vector de viento cada 12 s durante la batalla. Vector de viento se consumirá para fortalecer la habilidad que uses.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="exaltation">
+            <span>Exaltación:</span>
+            <ul>
+                <li><i class="icon-archer"></i><span>Susurrante</span></li>
+                <li><i class="icon-archer"></i><span>Francotirador</span></li>
+            </ul>
+        </div>
+        <div class="skills">
+            <h6>Habilidades:</h6>
+            <ul>
+               <li><img src="//marketing-static-aws.neocraftstudio.com/goc/assets/img/character/archer/skills/1.png?version=cfe78ab7f1e5f3d70eeced7d67f9e419" alt=""></li>
+               <li><img src="//marketing-static-aws.neocraftstudio.com/goc/assets/img/character/archer/skills/2.png?version=06379dc60868c4a7ef08d22396cb8bd9" alt=""></li>
+               <li><img src="//marketing-static-aws.neocraftstudio.com/goc/assets/img/character/archer/skills/3.png?version=9dbf87dfdc1a0c2e7f8e6655b25dab9a" alt=""></li>
+               <li><img src="//marketing-static-aws.neocraftstudio.com/goc/assets/img/character/archer/skills/4.png?version=64e3d0e0e49a9191b3bf4c4441075597" alt=""></li>
+            </ul>
+        </div>
+    </div>
+
+
+    <!-- 人物角色展示 -->
+    <div class="character-show" data-video="https://www.youtube.com/embed/8NpuhUPm-Uo">
+        <div class="bg">
+            <img src="//marketing-static-aws.neocraftstudio.com/goc/assets/img/character/archer/icon.png?version=245879ff6e1ebd1a43b9fcff631741fa" alt="" class="icon">
+            <div class="spinning-circle hide" style="position: absolute"></div>
+            <svg
+                style="margin-top: 2px;"
+                xmlns="http://www.w3.org/2000/svg"
+                xmlns:xlink="http://www.w3.org/1999/xlink"
+                width="377px" height="377px">
+<path fill-rule="evenodd" stroke="#6F9097" stroke-width="2px" stroke-dasharray="8, 4" stroke-linecap="butt"
+      stroke-linejoin="miter" fill="none"
+      d="M188.000,1.781 C290.846,1.781 374.219,85.154 374.219,188.000 C374.219,290.846 290.846,374.219 188.000,374.219 C85.154,374.219 1.781,290.846 1.781,188.000 C1.781,85.154 85.154,1.781 188.000,1.781 Z" />
+</svg>
+        </div>
+        <div class="animated-role">
+            <img
+                src="//marketing-static-aws.neocraftstudio.com/goc/assets/img/character/archer/male_static.png?version=394eb730a5e323505359265836a0fadd"
+                height="750" style="margin-right: -40px;"
+                 alt="">
+        </div>
+    </div>
+</div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="character-info" data-role="oracle">
+    <!-- 角色信息 -->
+    <div class="character-details">
+        <div class="header">
+            <h3 class="name">Oráculo</h3>
+                        <form class="gender-switch">
+                <label class="male" data-src="//marketing-static-aws.neocraftstudio.com/goc/assets/img/character/oracle/male_static.png?version=26d14faef94602d33b7a4fa4144e23c9">
+                    <input type="radio" name="oracle-gender-switch" value="male"
+                           class="checked">
+                    <i> </i>
+                </label>
+                <label class="female" data-src="//marketing-static-aws.neocraftstudio.com/goc/assets/img/character/oracle/female_static.png?version=8f0bfe1377269008a8647b4da02196e2">
+                    <input type="radio" name="oracle-gender-switch" value="female"
+                           class="">
+                    <i> </i>
+                </label>
+            </form>
+        </div>
+        <div class="description">El oráculo no solo tiene la capacidad de recuperarse con fuerza para garantizar la seguridad de sus compañeros, también puede invocar ángeles poderosos para castigar a los enemigos.</div>
+        <div class="characteristics">
+            <p class="title">CARACTERÍSTICAS:</p>
+            <div class="value">Energía sagrada
+                <div class="info-popup">
+                    <i class="icon info"></i>
+                    <div class="content">
+                        <p class="scroll-wrapper">
+                            El oráculo obtiene Energía sagrada con ataques normales al azar. Energía sagrada: se puede consumir para fortalecer el efecto de la siguiente habilidad curativa.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="exaltation">
+            <span>Exaltación:</span>
+            <ul>
+                <li><i class="icon-oracle"></i><span>Juzgador</span></li>
+                <li><i class="icon-oracle"></i><span>Sabio blanco</span></li>
+            </ul>
+        </div>
+        <div class="skills">
+            <h6>Habilidades:</h6>
+            <ul>
+               <li><img src="//marketing-static-aws.neocraftstudio.com/goc/assets/img/character/oracle/skills/1.png?version=d83d4b0cb2ef79c695551773a1bda2ce" alt=""></li>
+               <li><img src="//marketing-static-aws.neocraftstudio.com/goc/assets/img/character/oracle/skills/2.png?version=07f927f58e2735fd6c223dd2e54b284a" alt=""></li>
+               <li><img src="//marketing-static-aws.neocraftstudio.com/goc/assets/img/character/oracle/skills/3.png?version=2bb08573c1280d71358e666cfb3005e6" alt=""></li>
+               <li><img src="//marketing-static-aws.neocraftstudio.com/goc/assets/img/character/oracle/skills/4.png?version=1464584f0f69e3d8c02d510e7893473c" alt=""></li>
+            </ul>
+        </div>
+    </div>
+
+
+    <!-- 人物角色展示 -->
+    <div class="character-show" data-video="https://www.youtube.com/embed/pUPEvsCIknw">
+        <div class="bg">
+            <img src="//marketing-static-aws.neocraftstudio.com/goc/assets/img/character/oracle/icon.png?version=99113a7d3f5829ff6e9274b3cdad6b19" alt="" class="icon">
+            <div class="spinning-circle hide" style="position: absolute"></div>
+            <svg
+                style="margin-top: 2px;"
+                xmlns="http://www.w3.org/2000/svg"
+                xmlns:xlink="http://www.w3.org/1999/xlink"
+                width="377px" height="377px">
+<path fill-rule="evenodd" stroke="#6F9097" stroke-width="2px" stroke-dasharray="8, 4" stroke-linecap="butt"
+      stroke-linejoin="miter" fill="none"
+      d="M188.000,1.781 C290.846,1.781 374.219,85.154 374.219,188.000 C374.219,290.846 290.846,374.219 188.000,374.219 C85.154,374.219 1.781,290.84
+
+
+
+<!--<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -91,7 +480,7 @@
 </script>
 </body>
 </html>
-
+-->
 
 
 
