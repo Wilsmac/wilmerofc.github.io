@@ -1,88 +1,65 @@
 
-<!DOCTYPE html>
-<html id="app" lang="es" dir="ltr">
-<head>
-  <meta charset="utf-8">
-  <title>Iniciar sesión - Spotify</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-  <base href="/">
-  <link rel="icon" href="https://accounts.scdn.co/sso/images/favicon.ace4d8543bbb017893402a1e9d1ac1fa.ico">
-  <script defer src="https://accounts.scdn.co/sso/js/indexReact.ae65d06462d78f07ed28.js" sp-bootstrap></script>
-  <meta id="bootstrap-data" sp-bootstrap-data='{"phoneFeatureEnabled":false,"previewEnabled":false,"user":false,"tpaState":"AQCrOrMsyPMCt2Rp2tN1mIy3JXFgNTi8oDdQsh3X7dTZdhRK1QecXqjk9GJGHSdJWioMdmsbcrQvr9BNpLpM4K61dThwr607ym+zt8GDhTyLn+T7N+m1BCC/+o9oB/UsN/+t0HdICkgKN1+eJ7e1GDkIeEyXH64YRqVDBoRkO6hzJuI5IaIicC7D/xnyrVYw7040BYisbwvCki8ZOYR9SixG38MWwHwe7DFziVAzZWPgg4sDZYm86j+dyqEDhbXt0YQfV5+ynxgzYheKbHmtwMOrE3H7qCTrgYdx+UlBTbxGiw==","geoLocationCountryCode":"GT","state":"","flowCtx":"36209fdb-e944-48c3-959c-5b324044ae61:1716341222","BON":["0","0",-1597162675]}' sp-component="login" sp-translations-data='eyJlcnJvclRpdGxlIjoiRXJyb3IiLCJsb2dpblRpdGxlIjoiSW5pY2lhciBzZXNpw7NuIiwiZm9yZ290WW91clBhc3N3b3JkVXNlcm5hbWUiOiLCv0hhcyBvbHZpZGFkbyB0dSBjb250cmFzZcOxYT8iLCJkb250SGF2ZUFuQWNjb3VudCI6IsK/Tm8gdGllbmVzIGN1ZW50YT8iLCJpbnB1dFVzZXJuYW1lIjoiQ29ycmVvIGVsZWN0csOzbmljbyBvIG5vbWJyZSBkZSB1c3VhcmlvIiwiaW5wdXRFbWFpbE9yVXNlcm5hbWUiOiJFbWFpbCBvIG5vbWJyZSBkZSB1c3VhcmlvIiwiaW5wdXRQYXNzd29yZCI6IkNvbnRyYXNlw7FhIiwiY2hlY2tib3hSZW1lbWJlck1lIjoiUmVjb3JkYXJtZSIsImVycm9yRm9ybURlZmF1bHQiOiLCoVZheWEhIEFsZ28gc2FsacOzIG1hbC4gSW50w6ludGFsbyBkZSBudWV2byBvIHZpc2l0YSBudWVzdHJhIDxoZWxwTGluaz5zZWNjacOzbiBkZSBheXVkYTwvaGVscExpbms+LiIsImVycm9ySW52YWxpZENyZWRlbnRpYWxzIjoiTm9tYnJlIGRlIHVzdWFyaW8gbyBjb250cmFzZcOxYSBpbmNvcnJlY3Rvcy4iLCJlcnJvckludmFsaWRDcmVkZW50aWFsc0ltcHJvdmVkIjoiTGEgZGlyZWNjacOzbiBkZSBlbWFpbCwgZWwgbm9tYnJlIGRlIHVzdWFyaW8gbyBsYSBjb250cmFzZcOxYSBzb24gaW5jb3JyZWN0b3MuIiwiZXJyb3JVbmtub3duIjoiwqFWYXlhISBBbGdvIHNhbGnDsyBtYWwuIEludMOpbnRhbG8gZGUgbnVldm8gbyB2aXNpdGEgbnVlc3RyYSA8aGVscExpbms+c2VjY2nDs24gZGUgYXl1ZGE8L2hlbHBMaW5rPi4iLCJlcnJvclRyYW5zaWVudCI6IlNlIHByb2R1am8gdW4gZXJyb3IgYWwgaW5pY2lhciBzZXNpw7NuLiBJbnTDqW50YWxvIGRlIG51ZXZvLiIsImVycm9yRmFjZWJvb2tBY2NvdW50IjoiTm8gdGllbmVzIHVuYSBjdWVudGEgZGUgU3BvdGlmeSBjb25lY3RhZGEgYSB0dSBjdWVudGEgZGUgRmFjZWJvb2suIFNpIHRpZW5lcyB1bmEgY3VlbnRhIGRlIFNwb3RpZnks4oCCaW5pY2lhIHNlc2nDs24gY29uIHR1cyBjcmVkZW5jaWFsZXMgZGUgU3BvdGlmeS4gU2kgbm8gdGllbmVzIHVuYSBjdWVudGEgZGUgU3BvdGlmeSwgPGxpbmtXaXRoSHJlZj5yZWfDrXN0cmF0ZTwvbGlua1dpdGhIcmVmPi4iLCJlcnJvclNlcnZlckVycm9yIjoiU2UgcHJvZHVqbyB1biBlcnJvciBhbCBwcm9jZXNhciBsYSBzb2xpY2l0dWQuIEludMOpbnRhbG8gZGUgbnVldm8uIiwiZXJyb3JVc2VybmFtZVJlcXVpcmVkIjoiSW5ncmVzYSB0dSBub21icmUgZGUgdXN1YXJpbyBkZSBTcG90aWZ5IG8gdHUgZGlyZWNjacOzbiBkZSBjb3JyZW8gZWxlY3Ryw7NuaWNvLiIsImVycm9yVXNlcm5hbWVJbnZhbGlkQ2hhcmFjdGVycyI6IkVsIG5vbWJyZSBkZSB1c3VhcmlvIHRpZW5lIGNhcmFjdGVyZXMgbm8gcGVybWl0aWRvczoge2ZvcmJpZGRlbkNoYXJzfS4iLCJlcnJvclBhc3N3b3JkUmVxdWlyZWQiOiJQb3IgZmF2b3IgaW50cm9kdWNlIHR1IGNvbnRyYXNlw7FhLiIsImVycm9yTm9JbnRlcm5ldENvbm5lY3Rpdml0eSI6IkhheSB1biBwcm9ibGVtYSBkZSBjb25leGnDs24uIFZlcmlmaWNhIHR1IGNvbmV4acOzbiBhIEludGVybmV0IGUge3RyeUFnYWluTGlua30uIiwiZXJyb3JUcnlBZ2FpbiI6IkludGVudGFyIGRlIG51ZXZvIiwibG9nSW4iOiJJbmljaWFyIFNlc2nDs24iLCJsb2dJblRvU3BvdGlmeSI6IkluaWNpYSBzZXNpw7NuIGVuIFNwb3RpZnkiLCJzaWduVXBGb3JTcG90aWZ5IjoiUmVnw61zdHJhdGUgZW4gU3BvdGlmeSIsIm9yIjoibyIsImxvZ2luVG9Db250aW51ZSI6IlBhcmEgY29udGludWFyLCBpbmljaWEgc2VzacOzbiBlbiBTcG90aWZ5LiIsImVycm9yVmFsaWRhdGlvbkludmFsaWRDb2RlIjoiRXN0ZSBjw7NkaWdvIG5vIGVzIHbDoWxpZG8uIFZlcmlmaWNhIGVsIFNNUyB5IHZ1ZWx2ZSBhIGludGVudGFybG8uIiwiZXJyb3JWYWxpZGF0aW9uSW52YWxpZENvZGVHZW5lcmljIjoiRWwgY8OzZGlnbyBubyBlcyB2w6FsaWRvLiBWZXJpZsOtY2FsbyBlIGludMOpbnRhbG8gZGUgbnVldm8uIiwiZXJyb3JTdWJtaXRUb29rVG9vTG9uZ1RvQ3JlYXRlIjoiVHUgc29saWNpdHVkIHRhcmTDsyBkZW1hc2lhZG8gdGllbXBvIGVuIGNvbXBsZXRhcnNlLiBWdWVsdmUgYSBpbnRlbnRhcmxvLiIsImVycm9yQXBwbGVBY2NvdW50IjoiTm8gdGllbmVzIHVuYSBjdWVudGEgZGUgU3BvdGlmeSBjb25lY3RhZGEgYSB0dSBBcHBsZSBJRC4gU2kgdGllbmVzIHVuYSBjdWVudGEgZGUgU3BvdGlmeSwgaW5pY2lhIHNlc2nDs24gY29uIHR1IGVtYWlsIG8gdHUgbm9tYnJlIGRlIHVzdWFyaW8gZGUgU3BvdGlmeS4gU2kgbm8gdGllbmVzIHVuYSBjdWVudGEgZGUgU3BvdGlmeSwgcmVnw61zdHJhdGUuIiwiY29udGludWVXaXRoQXBwbGUiOiJDb250aW51YXIgY29uIEFwcGxlIiwiY29udGludWVXaXRoRmFjZWJvb2siOiJDb250aW51YXIgY29uIEZhY2Vib29rIiwiY29udGludWVXaXRoUGhvbmVOdW1iZXIiOiJDb250aW51YXIgY29uIG7Dum1lcm8gZGUgdGVsw6lmb25vIiwiY29udGludWVXaXRoR29vZ2xlIjoiQ29udGludWFyIGNvbiBHb29nbGUiLCJlcnJvckdvb2dsZUFjY291bnQiOiJObyBoYXkgbmluZ3VuYSBjdWVudGEgZGUgU3BvdGlmeSBjb25lY3RhZGEgYSB0dSBjdWVudGEgZGUgR29vZ2xlLiBTaSB0aWVuZXMgY3VlbnRhIGRlIFNwb3RpZnksIHBydWViYSBhIGluaWNpYXIgc2VzacOzbiBjb24gdHUgY29ycmVvIGVsZWN0csOzbmljbyBvIG5vbWJyZSBkZSB1c3VhcmlvIGRlIFNwb3RpZnkuIFNpIG5vIHRpZW5lcyBjdWVudGEgZGUgU3BvdGlmeSwgcmVnw61zdHJhdGUuIiwicmVjYXB0Y2hhTGVnYWxOb3RpY2UiOiJFc3RlIHNpdGlvIGVzdMOhIHByb3RlZ2lkbyBwb3IgcmVDQVBUQ0hBIHkgc2UgYXBsaWNhbiBsYSA8Z29vZ2xlUHJpdmFjeVBvbGljeUxpbms+UG9sw610aWNhIGRlIFByaXZhY2lkYWQ8L2dvb2dsZVByaXZhY3lQb2xpY3lMaW5rPiB5IGxvcyA8Z29vZ2xlVGVybXNMaW5rPlTDqXJtaW5vcyBkZSBTZXJ2aWNpbzwvZ29vZ2xlVGVybXNMaW5rPiBkZSBHb29nbGUuIiwibG9naW5XaXRob3V0UGFzc3dvcmQiOiJJbmljaWFyIHNlc2nDs24gc2luIGNvbnRyYXNlw7FhIiwibWFnaWNfbGlua19wb3B1cF9oZWFkZXIiOiLCv1RpZW5lcyBwcm9ibGVtYXMgcGFyYSBpbmljaWFyIHNlc2nDs24/IiwibWFnaWNfbGlua19wb3B1cF9ib2R5IjoiVGUgZW52aWFtb3MgdW4gZW1haWwgY29uIHVuIGVubGFjZSBxdWUgdGUgcGVybWl0aXLDoSBpbmljaWFyIHNlc2nDs24gc2luIHVuYSBjb250cmFzZcOxYS4iLCJkaWFsb2dfX2FjdGlvbl9yZXRyeV9sb2dpbiI6IlByb2JhciBjb24gb3RyYSBjb250cmFzZcOxYSJ9'>
-  <style>
-    body {
-      background-color: #121212;
-      margin: 0;
-    }
-    #root {
-      min-height: 100vh;
-    }
-    .loading-indicator-container {
-      height: 100vh;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
-    .loading-indicator-container * {
-      box-sizing: border-box;
-    }
-    .loading-indicator {
-      content: "";
-      width: 56px;
-      inline-size: 56px;
-      block-size: 12.4px;
-      height: 12.4px;
-      overflow-clip-margin: content-box;
-      overflow: hidden;
-    }
-    .loading-indicator circle {
-      fill: white;
-      animation: loading-indicator-kf 1.32s linear infinite;
-      transform-origin: center center;
-      opacity: 0.5;
-    }
-    .loading-indicator circle:nth-of-type(2) {
-      animation-delay: 0.1s;
-    }
-    .loading-indicator circle:nth-of-type(3) {
-      animation-delay: 0.2s;
-    }
-    @keyframes loading-indicator-kf {
-      0% {
-        animation-timing-function: cubic-bezier(1, 0, 0.7, 1);
-        opacity: 0.5;
-        transform: scale(1);
-      }
-      40% {
-        animation-timing-function: cubic-bezier(0.3, 0, 0, 1);
-        opacity: 0.75;
-        transform: scale(1.3);
-      }
-      72.5% {
-        animation-timing-function: linear;
-        opacity: 0.5;
-        transform: scale(1);
-      }
-      100% {
-        opacity: 0.5;
-        transform: scale(1);
-      }
-    }
-  </style>
-</head>
-<body class="encore-dark-theme encore-layout-themes">
-<div id="root">
-  <div class="loading-indicator-container">
-    <svg class="loading-indicator" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="0 0 1 100" xml:space="preserve" role="progressbar" aria-valuetext="Loading">
-      <circle stroke="none" cx="-140" cy="50" r="32"></circle>
-      <circle stroke="none" cx="0" cy="50" r="32"></circle>
-      <circle stroke="none" cx="140" cy="50" r="32"></circle>
-    </svg>
-  </div>
-</div>
-</body>
-</html>
+<<!doctype html>
+<html  dir="ltr" lang="es" translate="no">
+	<head>
+		<meta charset="utf-8">
+		<link data-chunk="main" rel="stylesheet" href="https://a.poki.com/assets/main-9f4db315~d527d07a5baf4609f0c2.css">
+<link data-chunk="main" rel="stylesheet" href="https://a.poki.com/assets/main-a4fc0d9e~859e4898f506cb14146c.css">
+<link data-chunk="app-components-Pill" rel="stylesheet" href="https://a.poki.com/assets/app-components-Nav-module-css~f888977eb90856a98834.css">
+<link data-chunk="app-components-Pill" rel="stylesheet" href="https://a.poki.com/assets/app-components-Pill-module-css~351ad67bb10a2556425e.css">
+<link data-chunk="app-components-Logo" rel="stylesheet" href="https://a.poki.com/assets/app-components-Logo-module-css~1676ae6a9fee0f999074.css">
+<link data-chunk="app-components-NavButtons" rel="stylesheet" href="https://a.poki.com/assets/app-components-NavButtons-module-css~f588b445ef0ba8e2713d.css">
+<link data-chunk="app-components-PageGame" rel="stylesheet" href="https://a.poki.com/assets/app-components-SummaryTile-module-css~ecef3f5622a74255c5a2.css">
+<link data-chunk="app-components-PageGame" rel="stylesheet" href="https://a.poki.com/assets/app-components-SummaryTile~b8a17e0b3d896b32428e.css">
+<link data-chunk="app-components-PageGame" rel="stylesheet" href="https://a.poki.com/assets/app-components-contentTypes-Advertisement-module-css~5a3b518bb28ca83af3fd.css">
+<link data-chunk="app-components-PageGame" rel="stylesheet" href="https://a.poki.com/assets/app-components-contentTypes-TitleBox-module-css~ceb2dfffb5dd2439e733.css">
+<link data-chunk="app-components-PageGame" rel="stylesheet" href="https://a.poki.com/assets/app-components-MultiverseWorld-module-css~6eb3bf51169cd1cc2c07.css">
+<link data-chunk="app-components-PageGame" rel="stylesheet" href="https://a.poki.com/assets/app-components-contentTypes-GameContainer-module-css~817d5c0a3fa4ef53fef8.css">
+<link data-chunk="app-components-PageGame" rel="stylesheet" href="https://a.poki.com/assets/app-components-contentTypes-MultiverseCompanion-module-css~e2d4cc627a9c010bf822.css">
+<link data-chunk="app-components-ExternallyHostedCommunication-tsx" rel="stylesheet" href="https://a.poki.com/assets/app-components-ExternallyHostedCommunication-module-css~f23bd1f6fd29c1287d9d.css">
+<link data-chunk="app-components-PlayGameTile" rel="stylesheet" href="https://a.poki.com/assets/app-components-PlayGameTile-module-css~4345eb861bcc909fd381.css">
+<link data-chunk="app-components-TileLabel" rel="stylesheet" href="https://a.poki.com/assets/app-components-TileLabel-module-css~43f2417f0bf6a2242b8a.css">
+<link data-chunk="app-components-Description-tsx" rel="stylesheet" href="https://a.poki.com/assets/app-components-Description-module-css~f3cbac0967a1f38eee47.css">
+<link data-chunk="app-components-Breadcrumbs" rel="stylesheet" href="https://a.poki.com/assets/app-components-Breadcrumbs-module-css~6d21b9fc818fd73a4f97.css">
+<link data-chunk="app-components-Tags" rel="stylesheet" href="https://a.poki.com/assets/app-components-Tags-module-css~7529f9b4225a2b3fb3a9.css">
+<link data-chunk="app-components-Footer" rel="stylesheet" href="https://a.poki.com/assets/app-components-Footer-module-css~db957bef595eab30b34c.css">
+<link data-chunk="app-components-PageLoader" rel="stylesheet" href="https://a.poki.com/assets/app-components-PageLoader-module-css~2571241612565c1e781d.css">
 
+		<link rel="preconnect" href="https://a.poki.com" />
+		<link rel="preconnect" href="https://img.poki.com" />
+		
+		<link rel="preconnect" href="https://poki-gdn.com" />
+		<link rel="preconnect" href="https://games.poki.com" />
+		
+
+		<link rel="manifest" href="/manifest.json">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+		<meta name="apple-mobile-web-app-title" content="Poki">
+		<meta name="mobile-web-app-capable" content="yes" />
+		<meta name="color-scheme" content="only light">
+		<meta name="robots" content="max-image-preview:large">
+		<meta name="format-detection" content="telephone=no">
+		
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, minimal-ui, shrink-to-fit=no viewport-fit=cover" />
+		<script>
+			
+			window.rtl = false;
+			window.ENV = {"SERVICE_ENV":"production","DEPLOY_ENV":"cluster"};
+			window.context = {"geo":"GT","session":{},"user":{},"site":{"id":52,"lang":"es","title":"Poki","languageName":"Español","domain":"poki.com","domain_title":"Poki.com","iso_lang":"es","paths":{"prefix":"\u002Fes"}},"page":{"id":29667,"type":"game","path":"\u002Fes\u002Fg\u002Fdinosaur-game","content":{"game":{"id":29667}}},"tag":"pg-v5.12.0+4f70527e5f9f0ddc68207e1c92178dbc170339bc","isPokiAnalyticsEnabled":true};
+			window.pokiGTM = window.pokiGTM || [];
+			window.isPokiPlayground = 'true';
+			window.googletag = window.googletag || { cmd: [] };
+			window.pbjs = window.pbjs || { que: [] };
+
+			
+		window.pokiIsCalifornia = 'false';
+		window.pokiCountry = 'GT';
+		window.pokiBotScore = '99';
+		window.pokiBotVerified = 'false';
+		
+			var head;(()=>{var e={399:()=>{window.messageBuffer=[],window.messageListener=e=>{window.messageBuffer.push(e)},window.addEventListener("message",window.messageListener)}},o={};function i(t){var a=o[t];if(void 0!==a)return a.exports;var n=o[t]={exports:{}};return e[t](n,n.exports,i),n.exports}i.r=e=>{"undefined"!=typeof Symbol&&Symbol.toStringTag&&Object.defineProperty(e,Symbol.toStringTag,{value:"Module"}),Object.defineProperty(e,"__esModule",{value:!0})};var t={};(()=>{"use strict";function e(e){var o=new RegExp("".concat(e,"=([^;]+)(?:;|$)")).exec(document.cookie);return o?o[1]:""}function o(e,o,i){document.cookie="".concat(e,"=").concat(o,"; path=/; samesite=lax; max-age=").concat(Math.min(i||15552e3,15552e3))}function a(){for(var e=Math.floor(Date.now()/1e3),o="",i=0;i<4;i++)o=String.fromCharCode(255&e)+o,e>>=8;if(window.crypto&&crypto.getRandomValues&&Uint32Array){var t=new Uint32Array(12);crypto.getRandomValues(t);for(var a=0;a<12;a++)o+=String.fromCharCode(255&t[a])}else for(var n=0;n<12;n++)o+=String.fromCharCode(Math.floor(256*Math.random()));return btoa(o).replace(/\+/g,"-").replace(/\//g,"_").replace(/=/g,"")}i.r(t);function n(e,o,i){console.error(e);var t=[{k:"where",v:o},{k:"error",v:e.name&&e.message?"".concat(e.name,": ").concat(e.message):JSON.stringify(e)}];if(void 0!==i){var a=i;"string"!=typeof e&&(a=JSON.stringify(e)),t.push({k:"extra",v:a})}!function(e,o){if(navigator.sendBeacon){var i=navigator.sendBeacon.bind(navigator);try{if(i(e,o))return}catch(e){console.error(e)}}try{var t="XMLHttpRequest"in window?new XMLHttpRequest:new ActiveXObject("Microsoft.XMLHTTP");t.open("POST",e,!0),t.setRequestHeader("Content-Type","text/plain"),t.send(o)}catch(e){}}("https://t.poki.io/l",JSON.stringify({c:"observer-error",ve:7,d:t}))}window._pokiUserGlobalName=window._pokiUserGlobalName||"user";var r="poki_session";window._pokiSessionGlobalName=window._pokiSessionGlobalName||"session";var s=["poki.at","poki.be","poki.by","poki.ch","poki.cn","poki.co.id","poki.co.il","poki.com.br","poki.com","poki.cz","poki.de","poki.dk","poki.fi","poki.it","poki.jp","poki.nl","poki.pl","poki.pt","poki.se","www.trochoi.net"];function p(){try{var e=new URL(document.referrer).hostname;return s.indexOf(e)>-1?"poki":e}catch(e){}return""}function d(e,o){if(!e)return!1;if(!(e&&e.page&&e.landing_page&&e.previous_page))return!1;if(!e.tab_id)return!1;if(!e.expire||Date.now()>e.expire)return!1;if(e.expire>Date.now()+18e5)return!1;if(o){if(void 0!==e.referrer_domain){var i=p();if("poki"!==i&&i!==e.referrer_domain)return!1}var t=new URLSearchParams(window.location.search);if(["gclid","msclkid","yclid","ttclid","fbclid","utm_campaign","campaign","adgroup","creative","utm_term"].some((function(e){return t.has(e)}))||"web_app_manifest"===t.get("utm_source")||"bing"===t.get("utm_source")||"cpc"===t.get("utm_medium")||"rtb-cpm"===t.get("utm_medium"))return!1}return!0}function c(){var e=null;d(window[window._pokiSessionGlobalName],!1)&&(e=window[window._pokiSessionGlobalName]);try{var o=sessionStorage.getItem(r);if(o){var i=JSON.parse(o);d(i,!0)&&(!e||i.depth>e.depth)&&(e=i)}}catch(e){try{n(e,"getSession",sessionStorage.getItem(r))}catch(o){n(e,"getSession",o)}}return e}function w(){var o=0;window[window._pokiSessionGlobalName]&&window[window._pokiSessionGlobalName].count&&(o=window[window._pokiSessionGlobalName].count);try{var i=sessionStorage.getItem(r);if(i){var t=JSON.parse(i);t&&t.count&&t.count>o&&(o=t.count)}}catch(o){try{n(o,"getPreviousSessionCount",sessionStorage.getItem(r))}catch(e){n(o,"getPreviousSessionCount",e)}}try{var a=e(r);if(a){var s=JSON.parse(a);s&&s.count&&s.count>o&&(o=s.count)}}catch(o){try{n(o,"getPreviousSessionCount",e(r))}catch(e){n(o,"getPreviousSessionCount",e)}}return o}function u(){if(window[window._pokiSessionGlobalName]&&window[window._pokiSessionGlobalName].tab_id)return window[window._pokiSessionGlobalName].tab_id;try{var e=sessionStorage.getItem(r);if(e){var o=JSON.parse(e);if(o&&o.tab_id)return o.tab_id}}catch(e){}return a()}function g(){var o=0,i=c();i&&(o=i.depth);try{var t=e(r);if(t){var a=JSON.parse(t);!d(a,!0)||i&&a.id!==i.id||(o=Math.max(o,a.depth))}}catch(o){var s=null;try{s=e(r)||null}catch(o){}n(o,"getSessionDepth",s)}return o}function l(i,t,s){var l=null;try{(l=c())?(l.previous_page.path=l.page.path,l.previous_page.type=l.page.type,l.previous_page.id=l.page.id,l.previous_page.start=l.page.start,l.previous_page.pageview_id=l.page.pageview_id,l.page.path=i,l.page.type=t,l.page.id=s,l.page.start=Date.now(),l.page.pageview_id=a(),l.depth=g()+1,l.expire=Date.now()+18e5):l=function(i,t,s){try{var c=e(r);if(c){var l=JSON.parse(c);if(d(l,!0))return l.previous_page.path=l.page.path,l.previous_page.type=l.page.type,l.previous_page.id=l.page.id,l.previous_page.start=l.page.start,l.previous_page.pageview_id=l.page.pageview_id,l.page.path=i,l.page.type=t,l.page.id=s,l.page.start=Date.now(),l.page.pageview_id=a(),l.depth=g()+1,l.expire=Date.now()+18e5,l.tab_id=u(),o(r,JSON.stringify(l)),l}}catch(i){var v=null;try{v=e(r)||null}catch(i){}n(i,"getSessionDepth",v)}var m=a();return{id:a(),expire:Date.now()+18e5,tab_id:u(),depth:1,count:w()+1,page:{path:i,type:t,id:s,start:Date.now(),pageview_id:m},previous_page:{},landing_page:{path:i,type:t,id:s,start:Date.now(),pageview_id:m},referrer_domain:p()}}(i,t,s),l.count>1&&(o("poki_uid_new","0"),window[window._pokiUserGlobalName]&&(window[window._pokiUserGlobalName].is_new=!1));var v=JSON.stringify(l);try{sessionStorage.setItem(r,v)}catch(i){n(i,"updateSession-1")}window[window._pokiSessionGlobalName]=l;try{o(r,v)}catch(i){n(i,"updateSession-4")}}catch(i){n(i,"updateSession-2")}return l}i(399);window.addEventListener("unhandledrejection",(e=>{console.error(e)}));const{context:v}=window;window.updateSession=l,l(v.page.path,v.page.type,v.page.id),v.session=window.session,window.user=function(){var i,t,n=null===(i=window[window._pokiUserGlobalName])||void 0===i?void 0:i.id,r=(null===(t=window[window._pokiUserGlobalName])||void 0===t?void 0:t.is_new)||!1;return n||(n=e("poki_uid"),r="1"===e("poki_uid_new")),n&&function(e){if(!/^[A-Za-z0-9-_]+$/.test(e))return!1;try{return 16===atob(e.replace(/-/g,"+").replace(/_/g,"/")).length}catch(e){return!1}}(n)||(n=a(),r=!0),o("poki_uid",n),o("poki_uid_new",r?"1":"0"),window[window._pokiUserGlobalName]={id:n,is_new:r},{id:n,is_new:r}}(),v.user=window.user,window.tracker=window.tracker||[],window.context.geo=(window.pokiCountry||"").toUpperCase();try{window.localStorageConsentSet="true"===localStorage.getItem("localStorageConsentSet")}catch(e){}document.cookie.includes("poki_remarketing=false;")||!1||(window.pokiBingRemarketing=!0,window.pokiGoogleRemarketing=!0);if(!(document.cookie.includes("poki_analytics=false;")||!1)){const e=document.createElement("script");e.src="//a.poki.com/t2.js",document.head.appendChild(e)}})(),head=t})();
+			window.INITIAL_STATE = {"router":{"location":{"pathname":"\u002Fes\u002Fg\u002Fdinosaur-game","search":"","hash":"","key":"6k364y"},"action":"POP"},"ads":{"takeover":null,"pokiSDKLoaded":false,"adStackLoaded":false,"adStackReadyForLoad":false,"adBlocked":false,"mobileAdsOpportunity":false},"background":{"base":{"color":"var(--green-7)","image":"https:\u002F\u002Fa.poki.com\u002Fimages\u002Fbg-diamante.svg","style":"tile"},"apiOverride":null,"multiverse":null,"immersiveTakeover":null,"hovered":false},"client":{"bot":false,"cache":0,"device":"tablet","isIpadOS":false,"isIos":false,"visibility":true,"history":[],"geo":"GT","ccpaApplies":false,"host":"poki.com","nextPage":null,"viewportOrientation":"portrait","loadingPage":false,"recentGames":[],"hydrated":false,"usPrivacyString":"1---","consistentRandomSeed":0.5149322164394163,"externalGames":{},"privacyPopupRevision":"0","isAdsBlockedVisible":false,"mysteryGame":{"game":null,"triggered":false},"userSatisfactionShowed":false},"currency":{"EUR":{"EUR":1,"GBP":0.854463,"USD":1.086992},"GBP":{"EUR":1.1703256899362524,"GBP":1,"USD":1.2721346623551868},"USD":{"EUR":0.9199699721801081,"GBP":0.7860803023389317,"USD":1}},"experiment":{"config":{}},"game":{"isFullscreen":false,"wasFullscreen":false,"showAdStatus":false,"adStatusEvent":"","adDuration":0,"adCurrentTime":0,"loadingFinished":false},"pages":{"currentPagePath":null,"previousPagePath":null,"pages":{}},"ratings":{"voteEpicInitilized":false,"userVotes":{},"previousUserVotes":{},"feedbackGiven":{},"ratingsData":{}},"bugReport":{"reportEpicInitilized":false,"isReporting":false,"reportData":null},"search":{"query":"","expanded":false,"results":{"content":[]},"pending":false,"doneOnce":false,"error":false,"popularSearches":[],"searchSessionId":0,"quickSearchCategories":[]},"notifications":{"stack":[]},"site":{"mode":"web","site":{"id":52,"lang":"es","title":"Poki","languageName":"Español","domain":"poki.com","domain_title":"Poki.com","iso_lang":"es","paths":{"prefix":"\u002Fes"}},"sites":{"3":{"id":3,"lang":"en","title":"Poki","languageName":"English","domain":"poki.com","domain_title":"Poki.com","iso_lang":"en","paths":{"prefix":"\u002Fen"}},"7":{"id":7,"lang":"ru","title":"Poki (Поки)","languageName":"Pусский","domain":"poki.com","domain_title":"Poki.com","iso_lang":"ru","paths":{"prefix":"\u002Fru"}},"38":{"id":38,"lang":"uk","title":"Poki (Покі)","languageName":"Українська","domain":"poki.com","domain_title":"Poki.com","iso_lang":"uk","paths":{"prefix":"\u002Fua"}},"43":{"id":43,"lang":"ar","title":"Poki (بوكي)","languageName":"عربي","domain":"poki.com","domain_title":"Poki.com","iso_lang":"ar","paths":{"prefix":"\u002Far"}},"46":{"id":46,"lang":"th","title":"Poki","languageName":"ภาษาไทย","domain":"poki.com","domain_title":"Poki.com","iso_lang":"th","paths":{"prefix":"\u002Fth"}},"48":{"id":48,"lang":"ko","title":"Poki (포키)","languageName":"한국어","domain":"poki.com","domain_title":"Poki.com","iso_lang":"ko","paths":{"prefix":"\u002Fkr"}},"52":{"id":52,"lang":"es","title":"Poki","languageName":"Español","domain":"poki.com","domain_title":"Poki.com","iso_lang":"es","paths":{"prefix":"\u002Fes"}},"53":{"id":53,"lang":"fr","title":"Poki","languageName":"Français","domain":"poki.com","domain_title":"Poki.com","iso_lang":"fr","paths":{"prefix":"\u002Ffr"}},"54":{"id":54,"lang":"tr","title":"Poki","languageName":"Türkçe","domain":"poki.com","domain_title":"Poki.com","iso_lang":"tr","paths":{"prefix":"\u002Ftr"}},"56":{"id":56,"lang":"el","title":"Poki","languageName":"Ελληνικά","domain":"poki.com","domain_title":"Poki.com","iso_lang":"el","paths":{"prefix":"\u002Fgr"}},"57":{"id":57,"lang":"no","title":"Poki","languageName":"Norsk","domain":"poki.com","domain_title":"Poki.com","iso_lang":"no","paths":{"prefix":"\u002Fno"}},"58":{"id":58,"lang":"ro","title":"Poki","languageName":"Română","domain":"poki.com","domain_title":"Poki.com","iso_lang":"ro","paths":{"prefix":"\u002Fro"}},"59":{"id":59,"lang":"bg","title":"Poki (Поки)","languageName":"български","domain":"poki.com","domain_title":"Poki.com","iso_lang":"bg","paths":{"prefix":"\u002Fbg"}},"60":{"id":60,"lang":"hu","title":"Poki","languageName":"Magyar","domain":"poki.com","domain_title":"Poki.com","iso_lang":"hu","paths":{"prefix":"\u002Fhu"}},"61":{"id":61,"lang":"sk","title":"Poki","languageName":"Slovenčina","domain":"poki.com","domain_title":"Poki.com","iso_lang":"sk","paths":{"prefix":"\u002Fsk"}},"62":{"id":62,"lang":"sv","title":"Poki","languageName":"Svenska","domain":"poki.com","domain_title":"Poki.com","iso_lang":"sv","paths":{"prefix":"\u002Fse"}},"63":{"id":63,"lang":"it","title":"Poki","languageName":"Italiano","domain":"poki.com","domain_title":"Poki.com","iso_lang":"it","paths":{"prefix":"\u002Fit"}},"64":{"id":64,"lang":"da","title":"Poki","languageName":"Dansk","domain":"poki.com","domain_title":"Poki.com","iso_lang":"da","paths":{"prefix":"\u002Fdk"}},"65":{"id":65,"lang":"fi","title":"Poki","languageName":"Suomi","domain":"poki.com","domain_title":"Poki.com","iso_lang":"fi","paths":{"prefix":"\u002Ffi"}},"66":{"id":66,"lang":"pl","title":"Poki","languageName":"Polski","domain":"poki.com","domain_title":"Poki.com","iso_lang":"pl","paths":{"prefix":"\u002Fpl"}},"67":{"id":67,"lang":"cs","title":"Poki","languageName":"Čeština","domain":"poki.com","domain_title":"Poki.com","iso_lang":"cs","paths":{"prefix":"\u002Fcz"}},"68":{"id":68,"lang":"nl","title":"Poki","languageName":"Nederlands","domain":"poki.com","domain_title":"Poki.com","iso_lang":"nl","paths":{"prefix":"\u002Fnl"}},"69":{"id":69,"lang":"ja","title":"Poki (ポキ)","languageName":"日本語","domain":"poki.com","domain_title":"Poki.com","iso_lang":"ja","paths":{"prefix":"\u002Fjp"}},"70":{"id":70,"lang":"he","title":"Poki (פוקי)","languageName":"עִברִית","domain":"poki.com","domain_title":"Poki.com","iso_lang":"he","paths":{"prefix":"\u002Fil"}},"71":{"id":71,"lang":"pt","title":"Poki","languageName":"Português","domain":"poki.com","domain_title":"Poki.com","iso_lang":"pt-br","paths":{"prefix":"\u002Fbr"}},"72":{"id":72,"lang":"de","title":"Poki","languageName":"Deutsch","domain":"poki.com","domain_title":"Poki.com","iso_lang":"de","paths":{"prefix":"\u002Fde"}},"73":{"id":73,"lang":"zh","title":"Poki (宝玩)","languageName":"简体中文","domain":"poki.com","domain_title":"Poki.com","iso_lang":"zh","paths":{"prefix":"\u002Fzh"}},"74":{"id":74,"lang":"id","title":"Poki","languageName":"Bahasa Indonesia","domain":"poki.com","domain_title":"Poki.com","iso_lang":"id","paths":{"prefix":"\u002Fid"}}},"localisations":{"status":"fulfilled","endpointName":"getLocalisations","requestId":"S_go7lIbZNqgKHQ_Ps6d_","originalArgs":{"site":{"id":52,"lang":"es","title":"Poki","languageName":"Español","domain":"poki.com","domain_title":"Poki.com","iso_lang":"es","paths":{"prefix":"\u002Fes"}},"geo":"GT"},"startedTimeStamp":1716323792040,"data":{"about":"Acerca de","about_title":"Sobre Poki","advertisement":"Anuncio","allow":"Permitir","attach_screenshot":"Adjuntar captura de pantalla del juego","auto_redirect_button":"Volver al [language]","auto_redirect_message":"Hemos actualizado la página para que coincida con tu configuración de idioma. ¿Quieres volver a [language]?","auto_redirect_title":"Parece que hablas [language]","breadcrumb_games":"Juegos","by":"por","categories":"Categorías","category_meta_description":"¿Te gusta \u003Ccategory_title\u003E? \u003Csitename\u003E es el sitio web número uno para jugar juegos en línea gratis al instante en tu móvil, tableta o computadora. Sin descargas, sin necesidad de iniciar sesión. ¡Juega ahora!","category_meta_title":"\u003Ccategory_title_uppercase\u003E \u003Ccategory_emoji\u003E - ¡Juega Gratis Online! | \u003Csitename\u003E","category_schema":"¿Cuáles son los mejores %CATEGORY_NAME% gratuitos online?","category_schema_mobile":"¿Cuáles son los %CATEGORY_NAME% más populares para teléfono móvil o tablet?","check_the_other_games":"%title no se encuentra todavía disponible para dispositivos móviles y tablets.","clear":"borrar","closefeedbackpopup":"Cerrar el pop-up ","closesearch":"Cerrar búsqueda","cookie":"Cookies","cookie_consent_body":"
 
 
 
