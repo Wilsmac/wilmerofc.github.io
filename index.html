@@ -1,97 +1,88 @@
 
 <!DOCTYPE html>
-<html lang="en">
+<html id="app" lang="es" dir="ltr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Wilmer :3</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel='stylesheet' href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css'>
+  <meta charset="utf-8">
+  <title>Iniciar sesión - Spotify</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <base href="/">
+  <link rel="icon" href="https://accounts.scdn.co/sso/images/favicon.ace4d8543bbb017893402a1e9d1ac1fa.ico">
+  <script defer src="https://accounts.scdn.co/sso/js/indexReact.ae65d06462d78f07ed28.js" sp-bootstrap></script>
+  <meta id="bootstrap-data" sp-bootstrap-data='{"phoneFeatureEnabled":false,"previewEnabled":false,"user":false,"tpaState":"AQCrOrMsyPMCt2Rp2tN1mIy3JXFgNTi8oDdQsh3X7dTZdhRK1QecXqjk9GJGHSdJWioMdmsbcrQvr9BNpLpM4K61dThwr607ym+zt8GDhTyLn+T7N+m1BCC/+o9oB/UsN/+t0HdICkgKN1+eJ7e1GDkIeEyXH64YRqVDBoRkO6hzJuI5IaIicC7D/xnyrVYw7040BYisbwvCki8ZOYR9SixG38MWwHwe7DFziVAzZWPgg4sDZYm86j+dyqEDhbXt0YQfV5+ynxgzYheKbHmtwMOrE3H7qCTrgYdx+UlBTbxGiw==","geoLocationCountryCode":"GT","state":"","flowCtx":"36209fdb-e944-48c3-959c-5b324044ae61:1716341222","BON":["0","0",-1597162675]}' sp-component="login" sp-translations-data='eyJlcnJvclRpdGxlIjoiRXJyb3IiLCJsb2dpblRpdGxlIjoiSW5pY2lhciBzZXNpw7NuIiwiZm9yZ290WW91clBhc3N3b3JkVXNlcm5hbWUiOiLCv0hhcyBvbHZpZGFkbyB0dSBjb250cmFzZcOxYT8iLCJkb250SGF2ZUFuQWNjb3VudCI6IsK/Tm8gdGllbmVzIGN1ZW50YT8iLCJpbnB1dFVzZXJuYW1lIjoiQ29ycmVvIGVsZWN0csOzbmljbyBvIG5vbWJyZSBkZSB1c3VhcmlvIiwiaW5wdXRFbWFpbE9yVXNlcm5hbWUiOiJFbWFpbCBvIG5vbWJyZSBkZSB1c3VhcmlvIiwiaW5wdXRQYXNzd29yZCI6IkNvbnRyYXNlw7FhIiwiY2hlY2tib3hSZW1lbWJlck1lIjoiUmVjb3JkYXJtZSIsImVycm9yRm9ybURlZmF1bHQiOiLCoVZheWEhIEFsZ28gc2FsacOzIG1hbC4gSW50w6ludGFsbyBkZSBudWV2byBvIHZpc2l0YSBudWVzdHJhIDxoZWxwTGluaz5zZWNjacOzbiBkZSBheXVkYTwvaGVscExpbms+LiIsImVycm9ySW52YWxpZENyZWRlbnRpYWxzIjoiTm9tYnJlIGRlIHVzdWFyaW8gbyBjb250cmFzZcOxYSBpbmNvcnJlY3Rvcy4iLCJlcnJvckludmFsaWRDcmVkZW50aWFsc0ltcHJvdmVkIjoiTGEgZGlyZWNjacOzbiBkZSBlbWFpbCwgZWwgbm9tYnJlIGRlIHVzdWFyaW8gbyBsYSBjb250cmFzZcOxYSBzb24gaW5jb3JyZWN0b3MuIiwiZXJyb3JVbmtub3duIjoiwqFWYXlhISBBbGdvIHNhbGnDsyBtYWwuIEludMOpbnRhbG8gZGUgbnVldm8gbyB2aXNpdGEgbnVlc3RyYSA8aGVscExpbms+c2VjY2nDs24gZGUgYXl1ZGE8L2hlbHBMaW5rPi4iLCJlcnJvclRyYW5zaWVudCI6IlNlIHByb2R1am8gdW4gZXJyb3IgYWwgaW5pY2lhciBzZXNpw7NuLiBJbnTDqW50YWxvIGRlIG51ZXZvLiIsImVycm9yRmFjZWJvb2tBY2NvdW50IjoiTm8gdGllbmVzIHVuYSBjdWVudGEgZGUgU3BvdGlmeSBjb25lY3RhZGEgYSB0dSBjdWVudGEgZGUgRmFjZWJvb2suIFNpIHRpZW5lcyB1bmEgY3VlbnRhIGRlIFNwb3RpZnks4oCCaW5pY2lhIHNlc2nDs24gY29uIHR1cyBjcmVkZW5jaWFsZXMgZGUgU3BvdGlmeS4gU2kgbm8gdGllbmVzIHVuYSBjdWVudGEgZGUgU3BvdGlmeSwgPGxpbmtXaXRoSHJlZj5yZWfDrXN0cmF0ZTwvbGlua1dpdGhIcmVmPi4iLCJlcnJvclNlcnZlckVycm9yIjoiU2UgcHJvZHVqbyB1biBlcnJvciBhbCBwcm9jZXNhciBsYSBzb2xpY2l0dWQuIEludMOpbnRhbG8gZGUgbnVldm8uIiwiZXJyb3JVc2VybmFtZVJlcXVpcmVkIjoiSW5ncmVzYSB0dSBub21icmUgZGUgdXN1YXJpbyBkZSBTcG90aWZ5IG8gdHUgZGlyZWNjacOzbiBkZSBjb3JyZW8gZWxlY3Ryw7NuaWNvLiIsImVycm9yVXNlcm5hbWVJbnZhbGlkQ2hhcmFjdGVycyI6IkVsIG5vbWJyZSBkZSB1c3VhcmlvIHRpZW5lIGNhcmFjdGVyZXMgbm8gcGVybWl0aWRvczoge2ZvcmJpZGRlbkNoYXJzfS4iLCJlcnJvclBhc3N3b3JkUmVxdWlyZWQiOiJQb3IgZmF2b3IgaW50cm9kdWNlIHR1IGNvbnRyYXNlw7FhLiIsImVycm9yTm9JbnRlcm5ldENvbm5lY3Rpdml0eSI6IkhheSB1biBwcm9ibGVtYSBkZSBjb25leGnDs24uIFZlcmlmaWNhIHR1IGNvbmV4acOzbiBhIEludGVybmV0IGUge3RyeUFnYWluTGlua30uIiwiZXJyb3JUcnlBZ2FpbiI6IkludGVudGFyIGRlIG51ZXZvIiwibG9nSW4iOiJJbmljaWFyIFNlc2nDs24iLCJsb2dJblRvU3BvdGlmeSI6IkluaWNpYSBzZXNpw7NuIGVuIFNwb3RpZnkiLCJzaWduVXBGb3JTcG90aWZ5IjoiUmVnw61zdHJhdGUgZW4gU3BvdGlmeSIsIm9yIjoibyIsImxvZ2luVG9Db250aW51ZSI6IlBhcmEgY29udGludWFyLCBpbmljaWEgc2VzacOzbiBlbiBTcG90aWZ5LiIsImVycm9yVmFsaWRhdGlvbkludmFsaWRDb2RlIjoiRXN0ZSBjw7NkaWdvIG5vIGVzIHbDoWxpZG8uIFZlcmlmaWNhIGVsIFNNUyB5IHZ1ZWx2ZSBhIGludGVudGFybG8uIiwiZXJyb3JWYWxpZGF0aW9uSW52YWxpZENvZGVHZW5lcmljIjoiRWwgY8OzZGlnbyBubyBlcyB2w6FsaWRvLiBWZXJpZsOtY2FsbyBlIGludMOpbnRhbG8gZGUgbnVldm8uIiwiZXJyb3JTdWJtaXRUb29rVG9vTG9uZ1RvQ3JlYXRlIjoiVHUgc29saWNpdHVkIHRhcmTDsyBkZW1hc2lhZG8gdGllbXBvIGVuIGNvbXBsZXRhcnNlLiBWdWVsdmUgYSBpbnRlbnRhcmxvLiIsImVycm9yQXBwbGVBY2NvdW50IjoiTm8gdGllbmVzIHVuYSBjdWVudGEgZGUgU3BvdGlmeSBjb25lY3RhZGEgYSB0dSBBcHBsZSBJRC4gU2kgdGllbmVzIHVuYSBjdWVudGEgZGUgU3BvdGlmeSwgaW5pY2lhIHNlc2nDs24gY29uIHR1IGVtYWlsIG8gdHUgbm9tYnJlIGRlIHVzdWFyaW8gZGUgU3BvdGlmeS4gU2kgbm8gdGllbmVzIHVuYSBjdWVudGEgZGUgU3BvdGlmeSwgcmVnw61zdHJhdGUuIiwiY29udGludWVXaXRoQXBwbGUiOiJDb250aW51YXIgY29uIEFwcGxlIiwiY29udGludWVXaXRoRmFjZWJvb2siOiJDb250aW51YXIgY29uIEZhY2Vib29rIiwiY29udGludWVXaXRoUGhvbmVOdW1iZXIiOiJDb250aW51YXIgY29uIG7Dum1lcm8gZGUgdGVsw6lmb25vIiwiY29udGludWVXaXRoR29vZ2xlIjoiQ29udGludWFyIGNvbiBHb29nbGUiLCJlcnJvckdvb2dsZUFjY291bnQiOiJObyBoYXkgbmluZ3VuYSBjdWVudGEgZGUgU3BvdGlmeSBjb25lY3RhZGEgYSB0dSBjdWVudGEgZGUgR29vZ2xlLiBTaSB0aWVuZXMgY3VlbnRhIGRlIFNwb3RpZnksIHBydWViYSBhIGluaWNpYXIgc2VzacOzbiBjb24gdHUgY29ycmVvIGVsZWN0csOzbmljbyBvIG5vbWJyZSBkZSB1c3VhcmlvIGRlIFNwb3RpZnkuIFNpIG5vIHRpZW5lcyBjdWVudGEgZGUgU3BvdGlmeSwgcmVnw61zdHJhdGUuIiwicmVjYXB0Y2hhTGVnYWxOb3RpY2UiOiJFc3RlIHNpdGlvIGVzdMOhIHByb3RlZ2lkbyBwb3IgcmVDQVBUQ0hBIHkgc2UgYXBsaWNhbiBsYSA8Z29vZ2xlUHJpdmFjeVBvbGljeUxpbms+UG9sw610aWNhIGRlIFByaXZhY2lkYWQ8L2dvb2dsZVByaXZhY3lQb2xpY3lMaW5rPiB5IGxvcyA8Z29vZ2xlVGVybXNMaW5rPlTDqXJtaW5vcyBkZSBTZXJ2aWNpbzwvZ29vZ2xlVGVybXNMaW5rPiBkZSBHb29nbGUuIiwibG9naW5XaXRob3V0UGFzc3dvcmQiOiJJbmljaWFyIHNlc2nDs24gc2luIGNvbnRyYXNlw7FhIiwibWFnaWNfbGlua19wb3B1cF9oZWFkZXIiOiLCv1RpZW5lcyBwcm9ibGVtYXMgcGFyYSBpbmljaWFyIHNlc2nDs24/IiwibWFnaWNfbGlua19wb3B1cF9ib2R5IjoiVGUgZW52aWFtb3MgdW4gZW1haWwgY29uIHVuIGVubGFjZSBxdWUgdGUgcGVybWl0aXLDoSBpbmljaWFyIHNlc2nDs24gc2luIHVuYSBjb250cmFzZcOxYS4iLCJkaWFsb2dfX2FjdGlvbl9yZXRyeV9sb2dpbiI6IlByb2JhciBjb24gb3RyYSBjb250cmFzZcOxYSJ9'>
+  <style>
+    body {
+      background-color: #121212;
+      margin: 0;
+    }
+    #root {
+      min-height: 100vh;
+    }
+    .loading-indicator-container {
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .loading-indicator-container * {
+      box-sizing: border-box;
+    }
+    .loading-indicator {
+      content: "";
+      width: 56px;
+      inline-size: 56px;
+      block-size: 12.4px;
+      height: 12.4px;
+      overflow-clip-margin: content-box;
+      overflow: hidden;
+    }
+    .loading-indicator circle {
+      fill: white;
+      animation: loading-indicator-kf 1.32s linear infinite;
+      transform-origin: center center;
+      opacity: 0.5;
+    }
+    .loading-indicator circle:nth-of-type(2) {
+      animation-delay: 0.1s;
+    }
+    .loading-indicator circle:nth-of-type(3) {
+      animation-delay: 0.2s;
+    }
+    @keyframes loading-indicator-kf {
+      0% {
+        animation-timing-function: cubic-bezier(1, 0, 0.7, 1);
+        opacity: 0.5;
+        transform: scale(1);
+      }
+      40% {
+        animation-timing-function: cubic-bezier(0.3, 0, 0, 1);
+        opacity: 0.75;
+        transform: scale(1.3);
+      }
+      72.5% {
+        animation-timing-function: linear;
+        opacity: 0.5;
+        transform: scale(1);
+      }
+      100% {
+        opacity: 0.5;
+        transform: scale(1);
+      }
+    }
+  </style>
 </head>
-<body>
-    <div class="container">
-        <div class="Form login-form">
-        <h2>Login</h2>
-        <form action="#">
-            <div class="input-box">
-                <i class='bx bxs-user'></i>
-                <label for="#">Username</label>
-                <input type="text" placeholder="Enter Your Username*">
-               
-               
-            </div>
-            <div class="input-box">
-                <i class='bx bxs-envelope' ></i>
-                <input type="text" placeholder="Enter Your Password*">
-                <label for="#">Password</label>
-              
-            </div>
-            <div class="forgot-section">
-                <span><input type="checkbox" name="" id="checked">Remember Me</span>
-                <span><a href="#">Forgot Password ?</a></span>
-            </div>
-            <button class="btn">Login</button>
-        </form>
-        <p>Or Sign up using</p>
-        <div class="social-media">
-            <i class='bx bxl-facebook'></i>
-            <i class='bx bxl-google'></i>
-            <i class='bx bxl-twitter'></i>
-        </div>
-        <p class="RegisteBtn RegiBtn"><a href="#">Register Now</a></p>
-    </div>
-    <div class="Form Register-form">
-        <h2>Register</h2>
-        <form action="#">
-            <div class="input-box">
-                <i class='bx bxs-user'></i>
-                <label for="#">Username</label>
-                <input type="text" placeholder="Enter Your Username*">
-               
-               
-            </div>
-            <div class="input-box">
-                <i class='bx bxs-envelope' ></i>
-                <input type="text" placeholder="Enter Your Password*">
-                <label for="#">Password</label>
-            </div>
-            <div class="input-box">
-                <i class='bx bxs-envelope' ></i>
-                <input type="text" placeholder="Enter Your Password*">
-                <label for="#">Confirm Password</label>
-            </div>
-            <div class="forgot-section">
-                <span><input type="checkbox" name="" id="checked">Remember Me</span>
-                <span><a href="#">Forgot Password ?</a></span>
-            </div>
-            <button class="btn" class="loginBtn">Register</button>
-        </form>
-        <p>Or Sign up using</p>
-        <div class="social-media">
-            <i class='bx bxl-facebook'></i>
-            <i class='bx bxl-google'></i>
-            <i class='bx bxl-twitter'></i>
-        </div>
-        <p class="LoginBtn"><a href="#">Login Now</a></p>
-    </div>
+<body class="encore-dark-theme encore-layout-themes">
+<div id="root">
+  <div class="loading-indicator-container">
+    <svg class="loading-indicator" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="0 0 1 100" xml:space="preserve" role="progressbar" aria-valuetext="Loading">
+      <circle stroke="none" cx="-140" cy="50" r="32"></circle>
+      <circle stroke="none" cx="0" cy="50" r="32"></circle>
+      <circle stroke="none" cx="140" cy="50" r="32"></circle>
+    </svg>
+  </div>
 </div>
-<script>
-    const container=document.querySelector(".container") ;
-    const loginForm=document.querySelector('.login-form')
-    const RegisterForm=document.querySelector('.Register-form');
-    const RegiBtn=document.querySelector('.RegiBtn');
-    const LoginBtn=document.querySelector('.LoginBtn');
-    RegiBtn.addEventListener('click',()=>{
-        RegisterForm.classList.add('active');
-        loginForm.classList.add('active')
-    })
-    LoginBtn.addEventListener('click',()=>{
-        RegisterForm.classList.remove('active');
-        loginForm.classList.remove('active')
-    })
-</script>
 </body>
 </html>
+
 
 
 
