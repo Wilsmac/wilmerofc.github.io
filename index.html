@@ -7,48 +7,36 @@
    <title>Corazon de palabras</title>
 <head>
  <style>
-      /*le damos un color de fondo a todo el cuerpo*/
+      
       body{
          background-color: #0b1522;
       }
-      /*accedemos al container que envuelve todas las palabras*/
+      
       .container{
          width: 500px;
-         height: 500px;
-         /*le dimos ancho y alto , ahora le vamos a dar un borde 
-         para que se vea*/
+         height: 500px;
          /*border: 3px solid blue; quitamos el borde del contenedor principal*/
          right: -90px;
          bottom: -30px;
-         position: relative;/*posicionamos relative para que quede como padre
-         el contenedorluego a las palabras de adentro posicionaremos absolute 
-         para que tome al contenedor padre como referencia al ponerle las propiedades
-         de margin , bottom etc*/
-
-      }/*accedimos a la palabra principal del centro de nuestro corazon*/
-
+         position: relative;
+      }
       .amor{
          position: absolute;
          right: 240px;
          bottom: 100px;
          color: red;
          font-size: 30px;
-      }
+      }
 
-      /*ahora accederemos a las clases de todas las palabras*/
-
-      .primera{
-         /*posicionaremos absolute para que tome como referencia el contenedor principal y ajustemos el right y bottom segun queramos*/
+      .primera{ 
          position: absolute;
          right: 250px;
          bottom: 0;    
       }
-
-     /* ahora accedemos a todas las palabras*/
-
+
      p{
       color: red;
-      /*damos una sombra*/
+      
       box-shadow: -10px 15px 100px #f20044;
      }
 
@@ -152,9 +140,7 @@
          }.vigesima6{
             position: absolute;
             right: 250px;
-            bottom: 190px;
-
-          /*hasta aqui tendriamos el medio corazon , tenes que seguir posicinando las palabras*/
+            bottom: 190px;
          }
 
          .primera-{
@@ -285,9 +271,7 @@
             right: 285px;
             bottom: 190px;
          }
-
-         /*podemos poner cualquier palabra */
-         /*POR ULTIMO VAMOS A REALIZAR LA ANIMACION DE LATIR*/
+
          p{
               /*accedemos a todos los parrafos */
               animation: latiendo 0.6s linear infinite;
