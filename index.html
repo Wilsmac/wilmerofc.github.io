@@ -1292,7 +1292,14 @@ mask-image: linear-gradient(to top, transparent 40%, #079097 80%) !important;
             </div>
           </div>
         </div>
-        <script src="https://raw.githubusercontent.com/Wilsmac/wilmerofc.github.io/main/java.js"></script>
+        <script>
+onload = () => {
+    const c = setTimeout(() => {
+      document.body.classList.remove("not-loaded");
+      clearTimeout(c);
+    }, 1000);
+  };
+</script>
       </body>
 
 </html>
